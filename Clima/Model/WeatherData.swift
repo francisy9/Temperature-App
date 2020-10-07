@@ -13,11 +13,12 @@ struct WeatherData: Decodable{
     let main: Main
     let weather: [Weather]
     
-    
 }
-struct Main: Decodable {
+struct Main: Codable {
     let temp: Double
 }
-struct Weather: Decodable {
+
+struct Weather: Codable {
     let description: String
+    let id: Int
 }
